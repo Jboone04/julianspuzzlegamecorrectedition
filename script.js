@@ -121,9 +121,12 @@ function Win()
 
     {
         clearInterval(timer);
+        let sound = new Audio('tada.wav');
+        sound.play();
+        setTimeout((){
         window.alert("Congratulations!!\nTime: " + timeCount + " seconds\nMoves: " + moveCount + "\nDo you want to play again?");
         window.location.reload();
-    }
+    }, 2000} //gives sound 2 seconds to play before window message pops up
 }
 
 function newGame()
